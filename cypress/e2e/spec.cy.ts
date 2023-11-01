@@ -1,19 +1,13 @@
 /// <reference types="cypress"/>
 
+import { GoogleObjects } from "../pageFactory/objectRepository/googleObjects"
+import { GooglePage } from "../pageFactory/pageRepository/google"
+
 // Test code
 it('Google', () => {
-  // Navigation to google
-  cy.visit('https://google.com')
+  const google = new GooglePage()
 
-    // Element to identify Serach box 
-    .get('#APjFqb')
-
-    // Checking visibility of search box and asserting
-    .should('be.visible').and('have.id', 'APjFqb')
-
-    // Entering desired text for search 
-    .type("mountain")
-  
-    // Clicking enter to search
-    .type('{enter}')
+  google.navigation()
+  google.assertingSearchBox()
+  google.search()
 })
