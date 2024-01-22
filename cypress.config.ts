@@ -1,5 +1,4 @@
 import { defineConfig } from "cypress";
-import cypress = require("cypress");
 
 export default defineConfig({
   reporter: 'cypress-mochawesome-reporter',
