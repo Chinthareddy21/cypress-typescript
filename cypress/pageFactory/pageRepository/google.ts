@@ -16,7 +16,6 @@ export class GooglePage extends GoogleObjects {
 
             // Clicking enter to search
             .type('{enter}')
-        cy.screenshot('search1')
     }
 
     search2() {
@@ -28,7 +27,6 @@ export class GooglePage extends GoogleObjects {
 
             // Clicking enter to search
             .type('{enter}')
-        cy.screenshot('search2')
     }
 
     search3() {
@@ -40,7 +38,6 @@ export class GooglePage extends GoogleObjects {
 
             // Clicking enter to search
             .type('{enter}')
-        cy.screenshot('search3')
     }
 
     assertingSearchBox() {
@@ -57,6 +54,7 @@ export class GooglePage extends GoogleObjects {
 
             // Checking visibility of search box and asserting
             .should('have.text', 'Mountain')
+        cy.screenshot('search1', { capture: 'viewport' })
     }
 
     assertingSearchResult2() {
@@ -65,6 +63,7 @@ export class GooglePage extends GoogleObjects {
 
             // Checking visibility of search box and asserting
             .should('have.text', 'gmail')
+        cy.screenshot('search2', { capture: 'viewport' })
     }
 
     assertingSearchResult3() {
@@ -73,5 +72,6 @@ export class GooglePage extends GoogleObjects {
 
             // Checking visibility of search box and asserting
             .should('have.text', 'Test')
+        cy.screenshot('search3', { capture: 'viewport' })
     }
 }
