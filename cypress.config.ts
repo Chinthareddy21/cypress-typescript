@@ -11,8 +11,7 @@ export default defineConfig({
     inlineAssets: true,
     saveAllAttempts: true,
     JSON: false,
-    html: true,
-    overwrite: true,
+    html: true
   },
   e2e: {
     setupNodeEvents(on, config) {
