@@ -1,6 +1,5 @@
 /// <reference types="cypress"/>
 
-import { GoogleObjects } from "../pageFactory/objectRepository/googleObjects"
 import { GooglePage } from "../pageFactory/pageRepository/google"
 
 // Test code

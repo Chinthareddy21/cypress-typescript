@@ -7,8 +7,11 @@
         ],
         "types": [
             "cypress",
-            "node"
-        ]
+            "node",
+        ],
+        "allowJs": true,
+        "baseUrl": "./",
+        "noEmit": true
     },
     "include": [
         "**/*.ts"

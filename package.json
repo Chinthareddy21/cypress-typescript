@@ -6,9 +6,12 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "test": "cypress run --browser chrome --headed"
+    "pretest": "echo \"starting tests\" && rm -R -f allure-results/*",
+    "posttest": "echo \"tests completed\" && allure serve",
+    "test": "npx cypress run --browser chrome --headed --env allure=true"
   },
   "devDependencies": {
-    "cypress-mochawesome-reporter": "^3.8.0"
+    "@mmisty/cypress-allure-adapter": "^0.16.4",
+    "cypress-mochawesome-reporter": "^3.8.1"
   }
 }
