@@ -9,9 +9,10 @@ export default defineConfig({
     reportPageTitle: 'custom-title',
     embeddedScreenshots: true,
     inlineAssets: true,
-    saveAllAttempts: false,
+    saveAllAttempts: true,
     JSON: false,
-    html: true
+    html: true,
+    overwrite: true,
   },
   e2e: {
     setupNodeEvents(on, config) {
