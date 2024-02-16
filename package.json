@@ -6,8 +6,8 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "pretest": "echo \"starting tests\" && rm -R -f allure-results/*",
-    "posttest": "echo \"tests completed\" && allure serve",
+    "pretest": " rm -R -f allure-results/* && echo \"starting tests\"",
+    "posttest": "allure serve && echo \"tests completed\"",
     "test": "npx cypress run --browser chrome --headed --env allure=true"
   },
   "devDependencies": {
